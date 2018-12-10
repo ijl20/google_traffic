@@ -24,7 +24,7 @@ do
     CONFIG_SH="${EXEC_DIR}/config/${config_id}.sh"
     source "${CONFIG_SH}"
     echo box_title- ${box_title} # from config file
-    echo command- "${EXEC_DIR}/capture_map.sh" "'@${google_lat},${google_lng},${google_zoom}/data=!5m1!1e1'" "${IMG_DIR}/${box_id}"
+    "${EXEC_DIR}/capture_map.sh" '@${google_lat},${google_lng},${google_zoom}/data=!5m1!1e1' "${IMG_DIR}/${box_id}"
 done
 
 #/home/ijl20/google_traffic/capture_map.sh  '@52.2122231,0.1196616,13z/data=!5m1!1e1' /data/tfc/google_traffic_map/      cambridge
