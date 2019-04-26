@@ -16,9 +16,11 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 Create directory to hold traffic map images:
 ```
-mkdir /mnt/sdb1/tfc/google_traffic
+su tfc_prod
 
-ln -s /mnt/sdb1/tfc/google_traffic /media/tfc/google_traffic
+mkdir /mnt/sdb1/tfc/google_traffic_map
+
+ln -s /mnt/sdb1/tfc/google_traffic_map /media/tfc/google_traffic_map
 ```
 
 ## Test
@@ -27,7 +29,7 @@ ln -s /mnt/sdb1/tfc/google_traffic /media/tfc/google_traffic
 google_traffic/run.sh
 ```
 
-Image files should appear in `/media/tfc/google_traffic`
+Image files should appear in `/media/tfc/google_traffic_map`
 
 ## Crontab
 
