@@ -3,6 +3,7 @@
 # define your list of boxes (each must have config/<box_id>.sh)
 declare -a boxes=("cambridge"
                   "cambridge_centre"
+                  "cambridge_highways"
                  )
 
 # get script directory
