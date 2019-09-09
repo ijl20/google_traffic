@@ -40,10 +40,5 @@ SAVE_DIR=$SAVE_DIR/$YYYY/$MM/$DD
 # Create the save directory (and intermediates) if necessary
 mkdir -p $SAVE_DIR
 
-SAVE_FILE=$SAVE_DIR/${TS}_${TODAY}-$NOW.png
-
-google-chrome --headless --disable-gpu --screenshot=$SAVE_FILE --window-size=1920,1080 "https://www.google.co.uk/maps/$MAP_STRING"
-
-chmod a+r $SAVE_FILE
-
+google-chrome --headless --disable-gpu --screenshot=$SAVE_DIR/${TS}_${TODAY}-$NOW.png --window-size=1920,1080 "https://www.google.co.uk/maps/$MAP_STRING"
 
