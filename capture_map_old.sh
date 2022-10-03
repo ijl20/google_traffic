@@ -14,7 +14,7 @@
 if [ -z $1 ]
 then
     # default map string is Cambridge area
-    MAP_STRING='config/cambridge.html'
+    MAP_STRING='@52.2122231,0.1196616,13z/data=!5m1!1e1'
 else
     MAP_STRING=$1
 fi
@@ -42,7 +42,7 @@ mkdir -p $SAVE_DIR
 
 SAVE_FILE=$SAVE_DIR/${TS}_${TODAY}-$NOW.png
 
-google-chrome --headless --disable-gpu --screenshot=${SAVE_FILE} --window-size=1920,1080 --run-all-compositor-stages-before-draw --virtual-time-budget=10000 "${MAP_STRING}"
+google-chrome --headless --disable-gpu --screenshot=$SAVE_FILE --window-size=1920,1080 "https://www.google.co.uk/maps/$MAP_STRING"
 
 chmod a+r $SAVE_FILE
 

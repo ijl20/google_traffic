@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Google Traffic Local</title>
+        <style>
+            #map {
+            height: 1080px;
+            width: 1920px;
+            }
+
+            /*
+            * Optional: Makes the sample page fill the window.
+            */
+            html,
+            body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div id="map">
+        </div>
+
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+    defer
+
+></script>
+<script>
+    function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+        disableDefaultUI: true, // a way to quickly hide all controls
+        mapTypeControl: false,
+        scaleControl: false,
+        zoomControl: false,
+          zoom: 15,
+          center: { lat: 52.2042928, lng: 0.1211853 },
+        });
+        const trafficLayer = new google.maps.TrafficLayer();
+
+        trafficLayer.setMap(map);
+      }
+
+      window.initMap = initMap;
+
+</script>
+    </body>
+</html>

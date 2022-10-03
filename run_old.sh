@@ -27,7 +27,7 @@ do
     source "${CONFIG_SH}"
     echo google_lat "${google_lat}"
     echo box_title- ${box_title} # from config file
-    CAPTURE_URL="${EXEC_DIR}/config/${config_id}.html"
+    CAPTURE_URL="@${google_lat},${google_lng},${google_zoom}/data=!5m1!1e1"
     CAPTURE_DIR="${IMG_DIR}/${box_id}"
     echo CAPTURE_URL \"${CAPTURE_URL}\"
     echo CAPTURE_DIR \"${CAPTURE_DIR}\"
