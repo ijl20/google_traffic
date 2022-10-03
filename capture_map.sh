@@ -42,7 +42,8 @@ mkdir -p $SAVE_DIR
 
 SAVE_FILE=$SAVE_DIR/${TS}_${TODAY}-$NOW.png
 
-google-chrome --headless --disable-gpu --screenshot=${SAVE_FILE} --window-size=1920,1080 --run-all-compositor-stages-before-draw --virtual-time-budget=10000 "${MAP_STRING}"
+# google-chrome --headless --disable-gpu --screenshot=${SAVE_FILE} --window-size=1920,1080 --run-all-compositor-stages-before-draw --virtual-time-budget=10000 "${MAP_STRING}"
+google-chrome --headless --disable-gpu --screenshot=${SAVE_FILE} --window-size=1920,1080 "${MAP_STRING}"
 
 chmod a+r $SAVE_FILE
 
